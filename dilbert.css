@@ -22,5 +22,5 @@
 }
 
 .dilbert-image {
-	-webkit-filter: contrast(10) grayscale(1) invert(1);
+	/* -webkit-filter: contrast(10) grayscale(1) invert(1); */
 }

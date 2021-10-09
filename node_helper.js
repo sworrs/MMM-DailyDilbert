@@ -14,12 +14,12 @@ module.exports = NodeHelper.create({
 		
 		if(notification === "GET_COMIC") {
 			
-			var url = "http://dilbert.com";
+			var url = "https://www.ingenieur.de/unterhaltung/dilbert/";
 			
 			console.log('-> Dibert request');
 			request(url, function (error, response, body) {
 				var $ = cheerio.load(body);
-				var src = $(".img-comic").attr('src');
+				var src = $(".size-large").attr('currentSrc');
 				console.log('Dibert -> ' + src);
 				self.sendSocketNotification("COMIC", {
 					img : src
